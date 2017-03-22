@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mensaje por clase</title>
+</head>
+<body>
+	
+	<h1 class="titulo">Esto es un título</h1>
+	<p class="mensaje">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, perspiciatis commodi excepturi numquam delectus natus aspernatur alias, at consequatur perferendis dignissimos omnis. <a href="#">Soy un enlace</a></p>
+	<img src="http://lorempixel.com/output/nature-q-c-301-301-3.jpg" alt="" class="mensaje">
+	<p id="parrafo">Culpa placeat cum enim inventore asperiores unde sit fugiat ea aliquam modi esse nostrum magni, eum, repellendus sint at aperiam hic dolorum!</p>
+	<span class="mensaje"></span>
+	<img src="http://lorempixel.com/output/city-q-c-301-301-9.jpg" alt="" class="mensaje">
+
+
+	<script>
+		function poquitosOmuchos (){
+			//La siguiente variable almacenará en un array todos los elementos de tipo clase con el nombre "mensaje"
+			var elementosMensaje = document.getElementsByClassName("mensaje");
+			//Mediante un .length se obtendrá el número de elementos correspondientes al array elementosMensaje y con ello obtendremos el total de elementos de tipo clase con nombre "mensaje" que tenemos en nuestro documento html
+			var noElementosMensaje = elementosMensaje.length;
+			//Para valorar el número de elementos utilicé el condicional if, en caso de encontrar un sólo elemento mostrará un alert con el mensaje "Es muy poco", en caso de encontrar más de 2 pero menos de 4 elementos mostrará "No está mal" y en caso de otras posibilidades no enunciadas mostrará "Son Muchos!"
+			if(noElementosMensaje == 1){
+				alert("Es muy poco");
+			} else if (noElementosMensaje>2 && noElementosMensaje<3){
+				alert("No está mal");
+			} else {
+				alert("Son Muchos!");
+			}
+		}
+		poquitosOmuchos();
+	</script>
+</body>
+</html>

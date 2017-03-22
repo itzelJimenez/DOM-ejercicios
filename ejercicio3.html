@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<form id="frm1">
+		Nombre: <input type="text" name="name" id="name"><br>
+		Mail: <input type="text" name="email" id="email"><br>
+	</form> 
+	<button onclick="myFunction()">Mostrar</button>
+
+	<p id="mostrarNombre"></p>
+	<p id="mostrarMail"></p>
+
+	<script>
+		function myFunction() {
+			//Primero obtengo los valores que el usuario ingresó y los guardo en las variables obtenerNombre y obtenerCorreo
+			var obtenerNombre = document.getElementById('name').value;
+			var obtenerCorreo = document.getElementById('email').value;
+			//Después obtengo las secciones de mi documento html dónde quiero mostrar los datos ingresados por el usuario
+			var nombreHtml = document.getElementById('mostrarNombre');
+			var mailHtml = document.getElementById('mostrarMail');
+			//Finalmente atribuyo a mis variables obtenidas de html los datos ingresados por el usuario con innerHTML
+			nombreHtml.innerHTML = "El nombre que ingresó es: " + obtenerNombre;
+			mailHtml.innerHTML = "El correo electrónico que ingresó es: " + obtenerCorreo;
+
+		}
+
+	</script>
+</body>
+</html>

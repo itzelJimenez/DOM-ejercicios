@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Número de enlaces</title>
+</head>
+<body>
+	
+	<h1>¿Cuántos enlaces hay?</h1>
+	<p>Hola, soy un <a href="#" name="enlace1">enlace</a></p>
+	<p>Los <a name="enlace2">enlaces</a> son muy útiles</p>
+	<p>Pueden llevarnos a otros <a name="enlace3">sitios</a> web</p>
+	<p>Podemos usar <a name="enlace4">enlaces</a> para crear botones también.</p>
+
+	<p>Muestra aquí cuántos enlaces hay en este sitio:</p>
+	<span id="num_enlaces"></span>
+	
+	<script>
+		function contarEnlaces (){
+			//La variable arregloEnlaces obtiene todos los Tags de tipo <a> que encuentre en el documento y los guardará como array
+			var arregloEnlaces=document.getElementsByTagName('a');
+			//La variable largo guardará el total de elementos mediante .length
+			var largo=arregloEnlaces.length; 
+			//La variable número de enlaces obtendrá la sección de html donde se escribirá el resultado
+			var numeroDeEnlaces=document.getElementById("num_enlaces")
+			//A continuación, mediante innerHTML se escribirá en la sección obtenida del html el total del número de enlaces.
+			numeroDeEnlaces.innerHTML="Hay " + largo +" etiquetas de tipo 'a'";
+			
+		}
+		contarEnlaces();
+	</script>
+</body>
+</html>
